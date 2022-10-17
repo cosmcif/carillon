@@ -1,0 +1,173 @@
+* {
+    font-family: 'Press Start 2P' !important;
+    text-transform: uppercase !important;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #000047;
+    flex-wrap: wrap;
+}
+
+.col2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+    background-color: black;
+    text-align: center;
+    flex: 0 0 100%;
+}
+
+header {
+    flex: 0 0 100%;
+    margin-bottom: auto;
+}
+
+h1 {
+    color: #1dc300;
+    text-align: center;
+    letter-spacing: 1vw;
+    text-shadow: 0 1vw 0 #e0e000, -0.6vw 1vw 0 #e000d9;
+}
+
+h2 {
+    color: #e0e000;
+    font-size: 2em;
+}
+
+h3 {
+    color: #e000d9;
+    font-size: 1.5em;
+}
+
+a,
+.create {
+    color: #00c3d9;
+    text-decoration: none;
+}
+
+a:hover,
+.create:hover,
+form.grid2 .sub:hover {
+    color: #e0e000;
+}
+
+a:active,
+.create.active,
+form.grid2 .sub:active {
+    color: #e000d9;
+}
+
+.create {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.play,
+.create {
+    font-size: 1.5em;
+}
+
+p,
+li,
+.here,
+form {
+    color: #c3c3d9;
+    font-size: 1em;
+    line-height: 2;
+}
+
+main,
+aside {
+    text-align: center;
+}
+
+ul,
+ol {
+
+    list-style-position: inside;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 75%;
+    }
+
+    main,
+    .others,
+    aside,
+    /* aside and nav were defined with the same rule but */
+    nav {
+        /* in a different place. I joined them together. also nav was accidentally 90%. */
+        flex: 0 0 100%;
+    }
+
+    nav ul li {
+        display: inline;
+        /* text-align: center; useless rule */
+    }
+
+    nav ul,
+    aside ol {
+        text-align: center;
+        padding: 0;
+    }
+
+    aside {
+        /* moved aside with main, nav and .others */
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    nav,
+    aside {
+        width: 18%;
+    }
+
+    main {
+        width: 58%;
+        /*changed from 57 to 58*/
+    }
+
+    .others {
+        width: 45%;
+    }
+
+    body {
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 7em;
+    }
+
+
+}
